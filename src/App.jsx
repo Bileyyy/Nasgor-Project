@@ -24,7 +24,7 @@ function App() {
       <Navbar />
       <div className="relative bg-[#FFFFFF] flex justify-end overflow-x-hidden">
         <img src={gambar8} alt='elemen2' className='w-full h-auto object-cover' />
-        <div className="absolute text-black" style={{ top: '28vh', left: '18vw' }}>
+        <div className="absolute text-black" style={{ top: '32vh', left: '18vw' }}>
   <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl mb-2">Nasi Goreng</h2>
   <h1 className="font-bold text-3xl sm:text-5xl md:text-6xl lg:text-7xl">D'JONGKO</h1>
   <p className="mt-2 text-base sm:text-lg md:text-xl lg:text-2xl">Est. 1980</p>
