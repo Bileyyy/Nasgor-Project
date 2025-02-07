@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-
 const Navbar = () => {
 
     return (
@@ -12,9 +10,7 @@ const Navbar = () => {
                 </ul>
                 <ul className="flex space-x-4">
                     <li>
-                    <Link to="/signup" className="hover:text-white font-inter text-md font-bold">
-                     Menu
-                    </Link>
+                    <a href="#signup" className="hover:text-white font-inter text-md font-bold">Menu</a>
                     </li>
                 </ul>
                 <ul className="flex space-x-4">
