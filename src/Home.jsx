@@ -17,7 +17,7 @@ const Home = () => {
         <div className="absolute top-40 right-1/6" style={{ marginTop: '-28 px' }}>
           <img
             src={gambar2}
-            alt='nasgor1'
+            alt='nasgor11g'
             className='w-72 h-72 z-10 mr-44' 
           />
         </div>
