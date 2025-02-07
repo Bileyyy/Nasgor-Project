@@ -24,14 +24,14 @@ function App() {
       <Navbar />
       <div className="relative bg-[#FFFFFF] flex justify-end overflow-x-hidden">
         <img src={gambar8} alt='elemen2' className='w-full h-auto object-cover' />
-        <div className="absolute text-black" style={{ top: '32vh', left: '18vw' }}>
-  <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl mb-2">Nasi Goreng</h2>
-  <h1 className="font-bold text-3xl sm:text-5xl md:text-6xl lg:text-7xl">D'JONGKO</h1>
-  <p className="mt-2 text-base sm:text-lg md:text-xl lg:text-2xl">Est. 1980</p>
+        <div className="absolute text-black top-[30%] left-[5%] md:left-[10%] lg:left-[20%]">
+  <h2 className="ml-2 mb-2 text-lg sm:text-sm md:text-md lg:text-3xl">Nasi Goreng</h2>
+  <h1 className="ml-2 text-3xl md:text-4xl lg:text-7xl font-bold">D'JONGKO</h1>
+  <p className="ml-2 mt-2 text-sm sm:text-sm md:text-md lg:text-xl">Est. 1980</p>
 </div>
-      </div>
+</div>
 
-      <div className="h-screen flex flex-col items-center justify-center bg-black bg-opacity-80 rounded-lg w-11/12 max-w-sm px-6 py-8 md:px-8 md:py-10 shadow-lg relative z-10">
+      <div className="bg-black bg-opacity-80 rounded-lg w-11/12 max-w-sm px-6 py-8 md:px-8 md:py-10 shadow-lg relative z-10">
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/login" element={<Login />} />
