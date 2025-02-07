@@ -29,11 +29,11 @@ function App() {
           <h1 className="ml-2 md:text-6xl font-bold">D'JONGKO</h1>
           <p className="ml-2 mt-2 md:text-xl">Est. 1980</p>
 
-          <Link to="/signup">
+          {/* <Link to="/signup">
             <div className="bg-amber-100 hover:bg-amber-200 text-black text-base py-1 px-2 rounded-full shadow-lg transition duration-300">
               Our Menu
             </div>
-          </Link>
+          </Link> */}
         </div>
       </div>
 
