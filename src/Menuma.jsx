@@ -227,25 +227,27 @@ const Menuma = () => {
 
   const [items, setItems] = useState(initialItems);
   const [cart, setCart] = useState([]);
-  // const [showCart, setShowCart] = useState(false);
   const [startIndex, setStartIndex] = useState(0);
   const [isSliding, setIsSliding] = useState(false);
 
   //Add to Cart
   const handleAddToCart = (item) => {
+    console.log("Item yang ditambahkan:", item); 
+    
     setCart((prevCart) => {
-      const existingItem = prevCart.find(cartItem => cartItem.id === item.id);
-      if (existingItem) {
-        return prevCart.map(cartItem =>
-          cartItem.id === item.id
-            ? { ...cartItem, quantity: cartItem.quantity + 1 }
-            : cartItem
-        );
-      } else {
-        return [...prevCart, { ...item, quantity: 1 }];
-      }
+        const existingItem = prevCart.find(cartItem => cartItem.id === item.id);
+        if (existingItem) {
+            return prevCart.map(cartItem =>
+                cartItem.id === item.id
+                    ? { ...cartItem, quantity: cartItem.quantity + 1 }
+                    : cartItem
+            );
+        } else {
+            return [...prevCart, { ...item, quantity: 1 }];
+        }
     });
-  };
+};
+
 
   //Remove Cart
   const handleRemoveFromCart = (itemId) => {
