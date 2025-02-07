@@ -278,16 +278,16 @@ const Menuma = () => {
 
   //Button Order Now
   const handleOrderNow = () => {
-    const phoneNumber = "6288228750758"; 
-    const totalPrice = calculateTotalPrice();
+    const phoneNumber = "6288228750758";
+    const totalPrice = calculateTotalPrice(); 
+    const message = `Saya ingin memesan:/n${cart
+        .map((item) => `${item.name} (x${item.quantity}) - Rp. ${item.price}`)
+        .join("/n")}/n/nTotal Harga: Rp. ${totalPrice}`;
 
-    const message = `Saya ingin memesan:\n${cart
-    .map((item) => `${item.name} (x${item.quantity}) - ${item.price}`)
-    .join("\n")}\n\nTotal Harga: Rp. ${totalPrice}`;
-    
-    const url = `https://wa.me/${6288228750758}?text=${encodeURIComponent(message)}`;
-    window.open(url, '_blank'); 
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(url, '_blank');
 };
+
 
 //Your Cart
   const Cart = () => (
@@ -344,64 +344,14 @@ const Menuma = () => {
     </div>
   );
 
-  // const handleNext = () => {
-  //   if (startIndex + 4 < items.length) { 
-  //     setIsSliding(true);
-  //     setTimeout(() => {
-  //       setStartIndex(startIndex + 4); 
-  //       setIsSliding(false);
-  //     }, 300);
-  //   } else {
-  //     console.log("No more items to show");
-  //   }
-  // };
-
-  // const handlePrev = () => {
-  //   if (startIndex > 0) { 
-  //     setIsSliding(true);
-  //     setTimeout(() => {
-  //       setStartIndex(startIndex - 4); 
-  //       setIsSliding(false);
-  //     }, 300);
-  //   }
-  // };
-
   const itemsToShow = items.slice(startIndex, startIndex + 4);
 
   const displayItems = [fixedItem, ...itemsToShow];
 
-  // console.log("Items to show:", itemsToShow);
-
   return (
     <div id="menu" className="min-h-screen bg-white px-6 py-4">
-      {/* <div className="flex justify-end mt-2 -mb-28">
-  <div className="mt-4">
-    <img src={cart1} alt="cart" className="w-12 h-12" />
-  </div>
-</div> */}
       <h1 className="text-4xl font-bold mb-6 text-center mt-20">Menu</h1>
-      {/* <div id="makanan"></div> */}
       <div className="-mt-4 space-x-6 mb-8 text-lg font-medium flex justify-center">
-        {/* <ul className="flex space-x-4">
-                    <li>
-                    <a href="#makanan" className="hover:text-amber-200">Makanan</a>
-                    </li>
-                </ul>
-        <ul className="flex space-x-4">
-                    <li>
-                    <a href="#minuman" className="hover:text-amber-200">Minuman</a>
-                    </li>
-                </ul>
-                <ul className="flex space-x-4">
-                    <li>
-                    <a href="#gorengan" className="hover:text-amber-200">Gorengan</a>
-                    </li>
-                </ul>
-                <ul className="flex space-x-4">
-                    <li>
-                    <a href="#sate" className="hover:text-amber-200">Sate</a>
-                    </li>
-                </ul> */}
       </div>
       <div className='grid grid-cols-2 md:grid-cols-4 gap-2 mt-10'>
         {itemsToShow.map((item) => (
@@ -571,31 +521,6 @@ const Menuma = () => {
         ))}
       </div>
       {cart.length > 0 && <Cart />}
-
-       
-      {/* <div className='flex justify-start left-6 items-center -mt-60 -ml-4 absolute z-50'>
-      {startIndex > 0 && (
-        <button 
-        onClick={handlePrev}
-        className="text-lg bg-amber-100 text-black rounded-full px-4 py-2 hover:text-amber-100 hover:bg-black transition duration-200"
-        style={{outline: 'none'}}
-      >
-        <i className='fas fa-arrow-left fa-md'></i>
-      </button>
-      )}
-      </div>
-
-      <div className="flex justify-end right-6 items-center -mt-60 -mr-4 absolute z-50">
-        {startIndex + 4 < items.length && (
-          <button 
-          onClick={handleNext} 
-          className="text-lg bg-amber-100 text-black rounded-full px-4 py-2 hover:text-amber-100 hover:bg-black transition duration-200"
-          style={{outline: 'none'}}
-        >
-          <i className='fas fa-arrow-right fa-md'></i>
-        </button>
-        )}
-      </div> */}
     </div> 
   );
 };
