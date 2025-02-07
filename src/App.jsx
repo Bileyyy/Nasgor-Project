@@ -37,6 +37,7 @@ function App() {
         </div>
       </div>
 
+      <div className="bg-black bg-opacity-80 rounded-lg w-11/12 max-w-sm px-6 py-8 md:px-8 md:py-10 shadow-lg relative z-10">
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/login" element={<Login />} />
@@ -47,6 +48,7 @@ function App() {
           </ProtectedRoute>
         } />
       </Routes>
+      </div>
 
       <About />
       <Menu />
