@@ -9,7 +9,7 @@ const Navbar = () => {
           </ul>
           <ul className="flex">
             <li>
-              <a href="/signup" className="hover:text-white font-inter text-sm md:text-md font-bold">Menu</a>
+              <a href="#signup" className="hover:text-white font-inter text-sm md:text-md font-bold">Menu</a>
             </li>
           </ul>
           <ul className="flex">
