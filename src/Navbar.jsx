@@ -11,11 +11,7 @@ const Navbar = () => {
           </ul>
           <ul className="flex">
             <li>
-
-                <Link to="/signup" className="hover:text-white font-inter text-sm md:text-md font-bold">
-                   Menu
-                </Link>
-              {/* <a href="#signup" className="hover:text-white font-inter text-sm md:text-md font-bold">Menu</a> */}
+              <a href="/signup" className="hover:text-white font-inter text-sm md:text-md font-bold">Menu</a>
             </li>
           </ul>
           <ul className="flex">
