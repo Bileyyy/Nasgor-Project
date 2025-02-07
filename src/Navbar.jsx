@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Navbar = () => {
     return (
       <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 flex justify-center items-center bg-amber-100 px-4 py-2 rounded-full shadow-lg w-full max-w-[70%] md:max-w-[50%] lg:max-w-[35%]">
@@ -9,7 +11,11 @@ const Navbar = () => {
           </ul>
           <ul className="flex">
             <li>
-              <a href="#signup" className="hover:text-white font-inter text-sm md:text-md font-bold">Menu</a>
+
+                <Link to="/signup" className="hover:text-white font-inter text-sm md:text-md font-bold">
+                   Menu
+                </Link>
+              {/* <a href="#signup" className="hover:text-white font-inter text-sm md:text-md font-bold">Menu</a> */}
             </li>
           </ul>
           <ul className="flex">
