@@ -13,6 +13,7 @@ import About from './About'
 // import Gallery from './Menu'
 import Menu from './Menuma'
 import Home from './Home'
+import { Link } from 'react-router-dom';
 // import Menu from './Menu'
 // import Menumi from './Menumi'
 // import Menugo from './Menugo'
@@ -39,11 +40,13 @@ function App() {
           <h1 className="ml-2 md:text-6xl font-bold">D'JONGKO</h1>
           <p className="ml-2 mt-2 md:text-xl">Est. 1980</p>
 
+          <Link to="/signup">
           <button className='ml-2 mt-2'>
           <a href="#Menu" className="bg-amber-100 hover:bg-amber-200 text-black text-base py-1 px-2 rounded-full shadow-lgm transition duration-300">
               Our Menu
           </a>
           </button>
+          </Link>
        </div>
      </div>
 
