@@ -40,7 +40,7 @@ const Signup = () => {
     };
 
     return (
-        <div className="flex flex-col items-center rounded-lg">
+        <div className="flex flex-col items-center justify-center rounded-lg" id="signup">
             <div className="flex justify-between mb-6">
                 <Link to="/login">
                     <button className="bg-transparent text-white py-2 px-4 rounded-full w-32 font-semibold focus:outline-none">

@@ -16,7 +16,7 @@ const Login = () => {
             await signInWithEmailAndPassword(auth, email, password);
             console.log('User Logged in')
             alert('Anda berhasil masuk')
-            navigate('/menuma')
+            navigate('/menu')
         } catch (error) {
             console.error('Error logging in:', error.message);            
         }
