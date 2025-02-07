@@ -3,6 +3,8 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "./firebase";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+import gambarA from "./asset/gambarA.png";
+import gambarB from "./asset/gambarB.png";
 
 const Login = () => {
     const [email, setEmail] = useState("");
@@ -22,7 +24,7 @@ const Login = () => {
     };
 
 return (
-    <div className="flex flex-col items-center rounded-lg">
+    <div className="h-screen flex flex-col sm:flex-row items-center justify-center bg-no-repeat bg-center bg-white relative overflow-hidden rounded-lg">
         <div className="flex justify-between mb-6">
                 <button className="bg-white text-black py-2 px-4 rounded-full w-32 font-semibold focus:outline-none">
                     Login
@@ -33,6 +35,23 @@ return (
                 </button>
             </Link>
         </div>
+
+        <div className="absolute right-96 mr-8 bottom-32">
+      <img 
+      src={gambarB}
+      alt="gambarB"
+      className="w-24 h-36 md:w-32 md:h-48 lg:w-40 lg:h-60" 
+      />
+    </div>
+
+    <div className="absolute left-96 ml-8 top-24">
+      <img
+      src={gambarA}
+      alt="gambarA"
+      className="w-24 h-36 md:w-32 md:h-48 lg:w-40 lg:h-60" 
+      />
+    </div>
+
     
         <form className="space-y-4 flex flex-col items-center">
             <div className="flex flex-col items-center w-72">
