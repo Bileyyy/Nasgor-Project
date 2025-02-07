@@ -21,26 +21,6 @@ import Menuma from './Menuma';
 function App() {
   return (
     <Router>
-
-<div className="h-screen flex flex-col md:flex-row items-center justify-center bg-no-repeat bg-center bg-white relative overflow-hidden">
-
-<div className="absolute right-96 mr-8 bottom-32">
-  <img 
-  src={gambarB}
-  alt="gambarB"
-  className="w-24 h-36 md:w-32 md:h-48 lg:w-40 lg:h-60" 
-  />
-</div>
-
-<div className="absolute left-96 ml-8 top-24">
-  <img
-  src={gambarA}
-  alt="gambarA"
-  className="w-24 h-36 md:w-32 md:h-48 lg:w-40 lg:h-60" 
-  />
-</div>
-</div>
-
       <Navbar />
       <div className="relative bg-[#FFFFFF] flex justify-end overflow-x-hidden">
         <img src={gambar8} alt='elemen2' className='w-full h-auto object-cover' />
