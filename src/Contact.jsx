@@ -5,10 +5,7 @@ import loc1 from './asset/loc1.png';
 const Contact = () => {
     return (
         <div id="contact" className="min-h-screen bg-white px-4 py-10 flex flex-col items-center">
-            {/* Judul */}
-            <h1 className="text-4xl font-bold mb-6 text-center mt-20 sm:text-3xl">Contact</h1>
-
-            {/* Kotak Informasi */}
+            <h1 className="text-4xl font-bold mb-6 text-center mt-20 sm:text-3xl">Contact</h1> 
             <div className="w-full max-w-lg bg-gray-300 rounded-2xl p-6 shadow-lg">
                 <p className="text-black text-center font-bold text-xl mb-4">Hubungi Kami di sini!</p>
 
