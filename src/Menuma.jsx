@@ -277,15 +277,19 @@ const Menuma = () => {
 
   //Button Order Now
   const handleOrderNow = () => {
-    const phoneNumber = "6288228750758";
+    const phoneNumber = "6288228750758"; // Pastikan format nomor benar
     const totalPrice = calculateTotalPrice(); 
-    const message = `Saya ingin memesan:\n${cart
-        .map((item) => `${item.name} (x${item.quantity}) - Rp. ${item.price}`)
-        .join("\n")}\n\nTotal Harga: Rp. ${totalPrice}`;
+    const message = `Saya ingin memesan: ${cart
+        .map((item) => `${item.name} (${item.quantity}) - ${item.price}`)
+        .join("")} Total Harga: Rp. ${totalPrice}`;
 
+    // Coba tanpa encodeURIComponent untuk pengujian
     const url = `https://wa.me/${phoneNumber}?text=${message}`;
+
+    console.log("Generated URL:", url); // Debug URL
     window.open(url, '_blank');
 };
+
 
 
 
