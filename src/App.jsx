@@ -9,14 +9,13 @@ import gambar6 from './asset/nasgor3.jpg';
 import gambar8 from './asset/BACKGROUNDN.png';
 import Navbar from './Navbar';
 import About from './About';
-import Menu from './Menuma';
+import Menuma from './Menuma';
 import Home from './Home';
 import Contact from './Contact';
 import Footer from './Footer';
 import Login from './Login';
 import Signup from './Signup';
 import ProtectedRoute from './ProtectedRoute';
-import Menuma from './Menuma';
 
 function App() {
   return (
@@ -31,21 +30,16 @@ function App() {
         </div>
       </div>
 
-      <div className="flex justify-center items-center bg-black bg-opacity-80 rounded-lg w-11/12 max-w-sm px-6 py-8 md:px-8 md:py-10 shadow-lg relative z-10">
+      <div>
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
-        <Route path="/menuma" element={
-          <ProtectedRoute>
-            <Menuma />
-          </ProtectedRoute>
-        } />
+        <Route path="/menuma" element={<Menuma /> } />
        </Routes>
       </div>
 
       <About />
-      <Menu />
       <Contact />
       <Footer />
     </Router>
