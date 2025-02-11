@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import './Menuma.css';
 import nasbar1 from './asset/nasbar1.jpg'
 import nasbar2 from './asset/nasbar2.jpg'
@@ -282,13 +280,14 @@ const Menuma = () => {
   const handleOrderNow = () => {
     const phoneNumber = "6288228750758";
     const totalPrice = calculateTotalPrice(); 
-    const message = `Saya ingin memesan:/n${cart
+    const message = `Saya ingin memesan:\n${cart
         .map((item) => `${item.name} (x${item.quantity}) - Rp. ${item.price}`)
-        .join("/n")}/n/nTotal Harga: Rp. ${totalPrice}`;
+        .join("\n")}\n\nTotal Harga: Rp. ${totalPrice}`;
 
-    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    const url = `https://wa.me/${phoneNumber}?text=${message}`;
     window.open(url, '_blank');
 };
+
 
 
 //Your Cart

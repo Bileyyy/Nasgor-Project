@@ -1,5 +1,3 @@
-import React from "react";
-
 const Navbar = () => {
     return (
       <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 flex justify-center items-center bg-amber-100 px-4 py-2 rounded-full shadow-lg w-full max-w-[70%] md:max-w-[50%] lg:max-w-[35%]">
