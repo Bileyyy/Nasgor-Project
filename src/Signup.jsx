@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth, db } from "./firebase";
-import { doc, setDoc } from "firebase/firestore";
+import { doc, getFirestore, setDoc } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 
@@ -11,6 +11,7 @@ const Signup = () => {
     const [confirmPassword, setConfirmPassword] = useState("");
     const [error, setError] = useState("");
     const navigate = useNavigate();
+    const db = getFirestore();
 
     useEffect(() => {
         if (password !== confirmPassword) {
@@ -87,7 +88,7 @@ const Signup = () => {
                 </div>
 
                 <button 
-                onClick={handleSignup}
+                onChange={handleSignup}
                 className="w-72 py-3 bg-white text-black rounded-full font-semibold hover:bg-gray-100"
                 >
                     Signup
