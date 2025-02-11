@@ -1,13 +1,11 @@
-import React from "react";
-import { Navigate } from "react-router-dom";
-import { auth } from "./firebase";
+// import React from "react";
+// import { Navigate } from "react-router-dom";
+// import { auth } from "./firebase";
 
-const ProtectedRoute = ({children}) => {
-    if (!auth.currentUser) {
-        return <Navigate to="/login" />
-    }
+// const ProtectedRoute = ({children}) => {
+//    const [user] = useAuthState(auth);
 
-    return children;
-};
+//    return user ? children : <Navigate to="/login" />;
+// };
 
-export default ProtectedRoute;
+// export default ProtectedRoute;

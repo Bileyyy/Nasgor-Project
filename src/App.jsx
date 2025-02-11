@@ -15,7 +15,7 @@ import Contact from './Contact';
 import Footer from './Footer';
 import Login from './Login';
 import Signup from './Signup';
-import ProtectedRoute from './ProtectedRoute';
+
 
 function App() {
   return (
@@ -30,16 +30,21 @@ function App() {
         </div>
       </div>
 
+      
+
+      
+      <About />
+      
       <div>
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
-        <Route path="/menuma" element={<Menuma /> } />
+        <Route path="/menuma" element={<Menuma />} />
        </Routes>
       </div>
 
-      <About />
+      
       <Contact />
       <Footer />
     </Router>

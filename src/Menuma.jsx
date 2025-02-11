@@ -28,7 +28,6 @@ import sat3 from './asset/sat3.jpg'
 import sat4 from './asset/sat4.jpg'
 
 
-
 const Menuma = () => {
   const fixedItem = {
     id: 4,
@@ -341,6 +340,8 @@ const Menuma = () => {
             >
                 Order Now
             </button>
+
+
         </div>
     </div>
   );
