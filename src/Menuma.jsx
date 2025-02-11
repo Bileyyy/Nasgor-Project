@@ -281,7 +281,7 @@ const Menuma = () => {
     const totalPrice = calculateTotalPrice(); 
     const message = `Saya ingin memesan: ${cart
         .map((item) => `${item.name} (${item.quantity}) - ${item.price}`)
-        .join("")} Total Harga: Rp. ${totalPrice}`;
+        .join("\n")} Total Harga: Rp. ${totalPrice}`;
 
     // Coba tanpa encodeURIComponent untuk pengujian
     const url = `https://wa.me/${phoneNumber}?text=${message}`;
